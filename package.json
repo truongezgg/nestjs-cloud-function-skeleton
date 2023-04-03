@@ -7,9 +7,12 @@
   "license": "UNLICENSED",
   "main": "dist/apps/functions/main.js",
   "scripts": {
+    "checker": "./bin/check-node.sh",
+    "prebuild": "npm run checker",
     "build": "npm run build:functions",
     "format": "prettier --write \"apps/**/*.ts\" \"libs/**/*.ts\"",
     "start": "nest start",
+    "prestart:dev": "npm run checker",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/apps/api/main",
@@ -27,8 +30,8 @@
     "build:api-admin": "nest build api-admin",
     "prod:api": "npm run build:functions && npx @google-cloud/functions-framework --target=api --source=. --port=3000",
     "prod:api-admin": "npm run build:functions && npx @google-cloud/functions-framework --target=api-admin  --source=. --port=3001",
-    "deploy:api": "gcloud functions deploy api --gen2 --runtime=nodejs18 --region=asia-southeast1 --source=. --entry-point=api --trigger-http --allow-unauthenticated --project=YOU_PROJECT_ID --min-instances=0 --max-instances=1 --memory=256MB",
-    "deploy:api-admin": "gcloud functions deploy api-admin --gen2 --runtime=nodejs18 --region=asia-southeast1 --source=. --entry-point=api-admin --trigger-http --allow-unauthenticated --project=YOU_PROJECT_ID --min-instances=0 --max-instances=1 --memory=256MB"
+    "deploy:api": "gcloud functions deploy api --gen2 --runtime=nodejs18 --region=asia-southeast1 --source=. --entry-point=api --trigger-http --allow-unauthenticated --project=YOUR_PROJECT_ID --min-instances=0 --max-instances=1 --memory=256MB",
+    "deploy:api-admin": "gcloud functions deploy api-admin --gen2 --runtime=nodejs18 --region=asia-southeast1 --source=. --entry-point=api-admin --trigger-http --allow-unauthenticated --project=YOUR_PROJECT_ID --min-instances=0 --max-instances=1 --memory=256MB"
   },
   "dependencies": {
     "@google-cloud/functions-framework": "^3.1.3",

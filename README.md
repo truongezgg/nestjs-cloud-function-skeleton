@@ -1,8 +1,6 @@
-## Installation
+## Google Cloud Function and NestJs
 
-```bash
-$ npm install
-```
+Starter project for Google Cloud Function and NestJs
 
 # My environment
 
@@ -25,13 +23,19 @@ https://docs.nestjs.com/faq/serverless
 
 Google cloud Cloud function quick start and complete "Before begin" step if you don't have install gcloud before:
 
-`https://cloud.google.com/functions/docs/create-deploy-gcloud#before-you-begin`
+https://cloud.google.com/functions/docs/create-deploy-gcloud#before-you-begin
 
 Run this command to authentication.
 
-`gcloud auth login`
+```bash
+$ gcloud auth login
+```
 
-`npm install`
+## Get started
+
+```bash
+$ npm install
+```
 
 Replace YOU_PROJECT_ID in package.json file with your google cloud `Project ID` (you can find it in project dashboard)
 
@@ -76,12 +80,10 @@ $ npm run deploy:api
 $ npm run deploy:api-admin
 ```
 
-You can change config of function scrips deploy in package.json file. Default config:
+You can change config of function scripts deploy in package.json file. Default config:
+
+https://cloud.google.com/functions/docs/configuring/memory
 
 - RAM: 256MB
 - Min instances: 0
 - Max instance: 2
-
-## License
-
-Nest is [MIT licensed](LICENSE).
