@@ -1,0 +1,17 @@
+export enum ErrorCode {
+  Unknown_Error = 'Unknown_Error',
+  Invalid_Input = 'Invalid_Input',
+  Not_Found = 'Not_Found',
+  The_Allowed_Number_Of_Calls_Has_Been_Exceeded = 'The_Allowed_Number_Of_Calls_Has_Been_Exceeded',
+  Forbidden_Resource = 'Forbidden_Resource',
+  Unauthorized = 'Unauthorized',
+  Receipt_Create_Token_Invalid = 'Receipt_Create_Token_Invalid',
+  Only_Contract_Creator_Can_Update_Token_Info = 'Only_Contract_Creator_Can_Update_Token_Info',
+  Can_Not_Get_Owner_Address_From_Contract = 'Can_Not_Get_Owner_Address_From_Contract',
+  Invalid_Signature = 'Invalid_Signature',
+  Invalid_Sign_Message = 'Invalid_Sign_Message',
+  Can_Not_Get_ERC20_Token_Info = 'Can_Not_Get_ERC20_Token_Info',
+  Token_Info_Already_Exists = 'Token_Info_Already_Exists',
+  Try_Again = 'Try_Again',
+  BlockNumber = 'BlockNumber',
+}

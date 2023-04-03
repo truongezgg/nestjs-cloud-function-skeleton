@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/api/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/api",
+  "projects": {
+    "api": {
+      "type": "application",
+      "root": "apps/api",
+      "entryFile": "main",
+      "sourceRoot": "apps/api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api/tsconfig.app.json"
+      }
+    },
+    "api-admin": {
+      "type": "application",
+      "root": "apps/api-admin",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-admin/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-admin/tsconfig.app.json"
+      }
+    },
+    "functions": {
+      "type": "application",
+      "root": "apps/functions",
+      "entryFile": "main",
+      "sourceRoot": "apps/functions/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/functions/tsconfig.app.json"
+      }
+    },
+    "swagger": {
+      "type": "library",
+      "root": "libs/swagger",
+      "entryFile": "index",
+      "sourceRoot": "libs/swagger/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/swagger/tsconfig.lib.json"
+      }
+    },
+    "cache": {
+      "type": "library",
+      "root": "libs/cache",
+      "entryFile": "index",
+      "sourceRoot": "libs/cache/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/cache/tsconfig.lib.json"
+      }
+    },
+    "core": {
+      "type": "library",
+      "root": "libs/core",
+      "entryFile": "index",
+      "sourceRoot": "libs/core/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/core/tsconfig.lib.json"
+      }
+    },
+    "database-mongo": {
+      "type": "library",
+      "root": "libs/database-mongo",
+      "entryFile": "index",
+      "sourceRoot": "libs/database-mongo/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/database-mongo/tsconfig.lib.json"
+      }
+    }
+  }
+}
